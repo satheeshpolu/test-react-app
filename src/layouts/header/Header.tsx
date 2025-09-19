@@ -21,7 +21,7 @@ const Header = () => {
                 <div style={{ display: 'flex', gap: '2rem' }}>
                     <Link to="/">Home</Link>
                     <Link to="/about">About</Link>
-                    <Link to="/contact-us">Contact Us</Link>
+                    <Link to="/contact">Contact</Link>
                 </div>
             </nav>
         </header>

@@ -1,17 +1,16 @@
-import { useState } from 'react'
+import './App.css';
+import Header from './layouts/header/Header';
+import Footer from './layouts/footer/Footer';
+import { Outlet } from 'react-router-dom';
 
-import './App.css'
-import Header from './layouts/header/Header'
-import Footer from './layouts/footer/Footer'
-import Body from './layouts/body/Body'
 function App() {
   return (
     <>
       <Header />
-      <Body />
+      <Outlet />   {/* Route content renders here */}
       <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
