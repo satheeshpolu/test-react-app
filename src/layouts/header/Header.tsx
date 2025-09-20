@@ -1,27 +1,19 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import './Header.css'
 
 const Header = () => {
     return (
-        <header style={{
-            width: '95%',
-            padding: '1rem',
-            background: '#222',
-            color: '#fff',
-            textAlign: 'center',
-            position: 'fixed',
-            left: 0,
-            top: 0,
-        }}>
+        <header className='container'>
             <nav style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                 {/* Logo on the left */}
-                <div style={{ fontWeight: 'bold', fontSize: '1.5rem', cursor: 'pointer' }} onClick={() => window.location.href = '/'}>
+                <div style={{ fontWeight: 'bold', fontSize: '1.5rem', cursor: 'pointer', color: '#646cff' }} onClick={() => window.location.href = '/'}>
                     MyLogo
                 </div>
                 {/* Links on the right */}
                 <div style={{ display: 'flex', gap: '2rem' }}>
-                    <Link to="/">Home</Link>
-                    <Link to="/about">About</Link>
-                    <Link to="/contact">Contact</Link>
+                    <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : '')}>Home</NavLink>
+                    <NavLink to="/about" className={({ isActive }) => (isActive ? 'active' : '')}>About</NavLink>
+                    <NavLink to="/contact" className={({ isActive }) => (isActive ? 'active' : '')}>Contact</NavLink>
                 </div>
             </nav>
         </header>
