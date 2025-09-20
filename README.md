@@ -24,4 +24,23 @@ Vite is a build tool that aims to provide a faster and leaner development experi
 ![alt text](./src/assets/project-dir.png)
 
 # Configured the routes
-``` npm install react-router-dom ```
+```
+npm install react-router-dom
+```
+### Step-1: Import the RouterProvider and modify the main.jsx as follows
+![alt text](./src/assets/image.png)
+
+### Step-2: Provide the outliet in the App componet and it will render the respectivice component on demand
+![alt text](./src/assets/image-1.png)
+### Step-3: Provide the links in the Header component
+``` 
+<div style={{ display: 'flex', gap: '2rem' }}>
+    <Link to="/">Home</Link>
+    <Link to="/about">About</Link>
+    <Link to="/contact">Contact</Link>
+</div> 
+```
+### Step-4: Run the following command at the root-directory of the project to run the tests 
+```
+npm run test
+```
